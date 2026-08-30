@@ -31,7 +31,7 @@ export default function LoginPage() {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-50">
-      <form onSubmit={handleLogin} className="w-full max-w-sm space-y-4 bg-white p-8 rounded-lg shadow">
+      <form onSubmit={handleLogin} className="w-full max-w-sm space-y-4 bg-black p-8 rounded-lg shadow">
         <h1 className="text-2xl font-bold text-center">Log in</h1>
 
         {error && <p className="text-red-500 text-sm">{error}</p>}
@@ -52,7 +52,7 @@ export default function LoginPage() {
           className="w-full border rounded p-2"
           required
         />
-        <button type="submit" className="w-full bg-black text-white rounded p-2 font-medium">
+        <button type="submit" className="w-full bg-white text-black rounded p-2 font-medium">
           Log In
         </button>
 

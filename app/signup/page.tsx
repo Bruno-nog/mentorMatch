@@ -40,7 +40,7 @@ export default function SignupPage() {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-50">
-      <form onSubmit={handleSignup} className="w-full max-w-sm space-y-4 bg-white p-8 rounded-lg shadow">
+      <form onSubmit={handleSignup} className="w-full max-w-sm space-y-4 bg-black p-8 rounded-lg shadow">
         <h1 className="text-2xl font-bold text-center">Create your account</h1>
 
         {error && <p className="text-red-500 text-sm">{error}</p>}
@@ -70,7 +70,7 @@ export default function SignupPage() {
           required
           minLength={6}
         />
-        <button type="submit" className="w-full bg-black text-white rounded p-2 font-medium">
+        <button type="submit" className="w-full bg-white text-black rounded p-2 font-medium">
           Sign Up
         </button>
 
