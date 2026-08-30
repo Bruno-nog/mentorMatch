@@ -27,11 +27,16 @@ export default function SignupPage() {
     }
 
     if (data.user) {
-      await supabase.from("profiles").insert({
+    const { error: profileError } = await supabase.from("profiles").insert({
         id: data.user.id,
         name,
         role: "mentee",
-      });
+    });
+
+    if (profileError) {
+        setError("Error creating profile: " + profileError.message);
+        return;
+    }
     }
 
     router.push("/mentors");
