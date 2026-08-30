@@ -7,7 +7,7 @@ export async function createClient() {
 
     return createServerClient(
         process.env.NEXT_PUBLIC_SUPABASE_URL!,
-        process.env.NEXT_PUBLICA_SUPABASE_ANON_KEY!,
+        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
         {
             cookies: {
                 getAll() {
@@ -19,7 +19,7 @@ export async function createClient() {
                         cookieStore.set(name, value, options)
                     )
                     } catch {
-                        
+
                     }
                 }
             }
